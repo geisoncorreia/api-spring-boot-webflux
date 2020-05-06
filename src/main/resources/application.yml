@@ -1,0 +1,18 @@
+wavefront:
+  application:
+    name: api-reactive
+    service: reservations
+
+server:
+  port: 8080
+
+#logging:
+#  level:
+#    org.springframework: Trace
+
+datasource:
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost/car-db
+    username: postgres
+    password: 123
