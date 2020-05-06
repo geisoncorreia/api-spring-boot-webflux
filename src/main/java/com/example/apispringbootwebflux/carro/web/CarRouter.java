@@ -14,6 +14,9 @@ public class CarRouter {
     @Bean
     public RouterFunction<ServerResponse> router(CarHandler carHandler) {
         return RouterFunctions.route(GET("/car/{id}").and(accept(APPLICATION_JSON)), carHandler::get)
-                .andRoute(GET("/car").and(accept(APPLICATION_JSON)), carHandler::all);
+                .andRoute(GET("/car").and(accept(APPLICATION_JSON)), carHandler::all)
+                .andRoute(POST("/car").and(accept(APPLICATION_JSON)).and(contentType(APPLICATION_JSON)), carHandler::post)
+                .andRoute(PUT("/car/{id}").and(accept(APPLICATION_JSON)).and(contentType(APPLICATION_JSON)), carHandler::put)
+                .andRoute(DELETE("/car/{id}"), carHandler::delete);
     }
 }

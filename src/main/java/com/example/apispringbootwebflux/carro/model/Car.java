@@ -22,4 +22,10 @@ public class Car {
     private UUID id;
     private Integer ano;
     private String cor;
+
+    public Car(CarDto car, UUID id) {
+        this.setAno(car.getAno());
+        this.setCor(car.getCor());
+        this.setId(id);
+    }
 }

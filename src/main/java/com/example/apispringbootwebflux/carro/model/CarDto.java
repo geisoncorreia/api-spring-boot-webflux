@@ -17,4 +17,11 @@ public class CarDto {
     private UUID id;
     private Integer ano;
     private String cor;
+
+    public CarDto(CarDto carDto, UUID id) {
+        this.setAno(carDto.getAno());
+        this.setCor(carDto.getCor());
+        this.setId(id);
+
+    }
 }

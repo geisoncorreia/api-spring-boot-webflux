@@ -1,15 +1,8 @@
 package com.example.apispringbootwebflux;
 
-import com.example.apispringbootwebflux.carro.model.Car;
-import lombok.var;
-import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.data.repository.reactive.ReactiveCrudRepository;
-import org.springframework.web.reactive.function.server.RouterFunction;
-import org.springframework.web.reactive.function.server.ServerResponse;
-import reactor.core.publisher.Flux;
+import springfox.documentation.swagger2.annotations.EnableSwagger2WebFlux;
 
 import java.util.UUID;
 

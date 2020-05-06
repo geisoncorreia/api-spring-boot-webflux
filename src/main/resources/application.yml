@@ -1,7 +1,7 @@
 wavefront:
   application:
-    name: api-reactive
-    service: reservations
+    name: api-car-webflux
+    service: cars
 
 server:
   port: 8080
